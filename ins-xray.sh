@@ -164,7 +164,7 @@ echo "" > /root/log-reboot.txt
 # Install Wondershaper
 cd /root/
 apt install wondershaper -y
-git clone https://github.com/magnific0/wondershaper.git >/dev/null 2>&1
+git clone https://github.com/AndreSakti/1/main/wondershaper.git >/dev/null 2>&1
 cd wondershaper
 make install
 cd
