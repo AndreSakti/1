@@ -51,8 +51,8 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
 # // Exporting URL Host
-export Server_URL="raw.githubusercontent.com/andre-sakti/test/main"
-export Server1_URL="raw.githubusercontent.com/andre-sakti/limit/main"
+export Server_URL="raw.githubusercontent.com/AndreSakti/test/main"
+export Server1_URL="raw.githubusercontent.com/AndreSakti/limit/main"
 export Server_Port="443"
 export Server_IP="underfined"
 export Script_Mode="Stable"
@@ -241,8 +241,8 @@ Save_And_Exit () {
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/andre-sakti/userbackup
-    git push -f https://$token@github.com/andre-sakti/userbackup.git &> /dev/null
+    git remote add origin https://github.com/AndreSakti/userbackup
+    git push -f https://$token@github.com/AndreSakti/userbackup.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
@@ -257,7 +257,7 @@ sleep 1
 echo -e "[ ${green}INFO${NC} ] Processing updating server...... "
 Save_And_Exit
 fi
-link="https://raw.githubusercontent.com/andre-sakti/userbackup/main/$NameUser/$NameUser.zip"
+link="https://raw.githubusercontent.com/AndreSakti/userbackup/main/$NameUser/$NameUser.zip"
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Backup done "
 sleep 1
@@ -286,7 +286,7 @@ function restore(){
 cd
 read -rp "Enter Name File Your Backup  : " -e NameUser
 
-cekdata=$(curl -sS https://raw.githubusercontent.com/andre-sakti/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
+cekdata=$(curl -sS https://raw.githubusercontent.com/AndreSakti/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
 
 [[ "$cekdata" = "404" ]] && {
 red "Data not found / you never backup"
@@ -299,7 +299,7 @@ echo -e "[ ${green}INFO${NC} ] • Restore Data..."
 read -rp "Password File: " -e InputPass
 echo -e "[ ${green}INFO${NC} ] • Downloading data.."
 mkdir /root/backup
-wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/andre-sakti/userbackup/main/$NameUser/$NameUser.zip" &> /dev/null
+wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/AndreSakti/userbackup/main/$NameUser/$NameUser.zip" &> /dev/null
 echo -e "[ ${green}INFO${NC} ] • Getting your data..."
 unzip -P $InputPass /root/backup/backup.zip &> /dev/null
 echo -e "[ ${green}INFO${NC} ] • Starting to restore data..."
