@@ -1,14 +1,12 @@
-#!/bin/bash
-
-BIBlack='\033[1;90m'      # Black
+#BIBlack='\033[1;90m'      # Black
 BIRed='\033[1;91m'        # Red
 BIGreen='\033[1;92m'      # Green
 BIYellow='\033[1;93m'     # Yellow
-BIBlue='\033[1;94m'       # Blue
-BIPurple='\033[1;95m'     # Purple
-BICyan='\033[1;96m'       # Cyan
-BIWhite='\033[1;97m'      # White
-UWhite='\033[4;37m'       # White
+#BIBlue='\033[1;94m'       # Blue
+#BIPurple='\033[1;95m'     # Purple
+#BICyan='\033[1;96m'       # Cyan
+BICyan='\033[1;97m'      # White
+Uwhite='\033[4;37m'       # White
 On_IPurple='\033[0;105m'  #
 On_IRed='\033[0;101m'
 IBlack='\033[0;90m'       # Black
@@ -20,6 +18,12 @@ IPurple='\033[0;95m'      # Purple
 ICyan='\033[0;96m'        # Cyan
 IWhite='\033[0;97m'       # White
 NC='\e[0m'
+
+# // Exporting Language to UTF-8
+
+export LANG='en_US.UTF-8'
+export LANGUAGE='en_US.UTF-8'
+
 
 # // Export Color & Information
 export RED='\033[0;31m'
@@ -45,8 +49,8 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
 # // Exporting URL Host
-export Server_URL="raw.githubusercontent.com/AndreSakti/test/main"
-export Server1_URL="raw.githubusercontent.com/AndreSakti/limit/main"
+export Server_URL="raw.githubusercontent.com/andre-sakti/test/main"
+export Server1_URL="raw.githubusercontent.com/andre-sakti/limit/main"
 export Server_Port="443"
 export Server_IP="underfined"
 export Script_Mode="Stable"
@@ -127,7 +131,7 @@ ressh="${green}ON${NC}"
 else
 ressh="${red}OFF${NC}"
 fi
-sshstunel=$(service stunnel5 status | grep active | cut -d ' ' $stat)
+sshstunel=$(service stunnel4 status | grep active | cut -d ' ' $stat)
 if [ "$sshstunel" = "active" ]; then
 resst="${green}ON${NC}"
 else
@@ -169,11 +173,9 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 read -n 1 -s -r -p "Press any key to back on menu"
 setting-menu
 else
-rm -fr /etc/xray/domain
 echo "IP=$host" > /var/lib/scrz-prem/ipvps.conf
-echo $host > /etc/xray/domain
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo "Dont forget to renew gen-ssl"
+echo "Dont forget to renew cert"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
@@ -182,7 +184,6 @@ fi
 function genssl(){
 clear
 systemctl stop nginx
-systemctl stop xray
 domain=$(cat /var/lib/scrz-prem/ipvps.conf | cut -d'=' -f2)
 Cek=$(lsof -i:80 | cut -d' ' -f1 | awk 'NR==2 {print $1}')
 if [[ ! -z "$Cek" ]]; then
@@ -193,74 +194,54 @@ sleep 2
 echo -e "[ ${green}INFO${NC} ] Processing to stop $Cek " 
 sleep 1
 fi
-echo -e "[ ${green}INFO${NC} ] Starting renew gen-ssl... " 
+echo -e "[ ${green}INFO${NC} ] Starting renew cert... " 
 sleep 2
-/root/.acme.sh/acme.sh --upgrade
-/root/.acme.sh/acme.sh --upgrade --auto-upgrade
 /root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
 /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
 ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
-echo -e "[ ${green}INFO${NC} ] Renew gen-ssl done... " 
+echo -e "[ ${green}INFO${NC} ] Renew cert done... " 
 sleep 2
 echo -e "[ ${green}INFO${NC} ] Starting service $Cek " 
 sleep 2
 echo $domain > /etc/xray/domain
-systemctl start nginx
-systemctl start xray
+systemctl restart xray
+systemctl restart nginx
 echo -e "[ ${green}INFO${NC} ] All finished... " 
 sleep 0.5
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
-export sem=$( curl -s https://raw.githubusercontent.com/AndreSakti/test/main/versions)
+export sem=$( curl -s https://raw.githubusercontent.com/andre-sakti/test/main/versions)
 export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
-ISPVPS=$( curl -s ipinfo.io/org )
-export Server_URL="raw.githubusercontent.com/AndreSakti/test/main"
+export Server_URL="raw.githubusercontent.com/andre-sakti/test/main"
 License_Key=$(cat /etc/${Auther}/license.key)
 export Nama_Issued_License=$( curl -s https://${Server_URL}/validated-registered-license-key.txt | grep -w $License_Key | cut -d ' ' -f 7-100 | tr -d '\r' | tr -d '\r\n')
-clear
+echo -e "                         ${BIWhite}${UWhite}About${NC}"
+echo -e "                 ${BICyan}Base Script : ${BIPurple}Horassss${NC}"
+echo -e "                 ${BICyan}Bot Dev     : ${BIPurple}@xolvadev${NC}"
+echo -e "                 ${BICyan}Decodec     :${BIPurple} @boootzzzz${NC}"
+echo -e "                 ${BICyan}${On_IPurple}Tanks To All My ${UWhite}Friends${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │                  ${BIWhite}${UWhite}Server Informations${NC}"
-echo -e "${BICyan} │"
-echo -e " ${BICyan}│  ${BICyan}Use Core        :  ${BIPurple}V2RAY CORE${NC}"
+echo -e " ${BICyan}│  ${BICyan}Use Core        :  ${BIPurple}XRAY${NC}"
 echo -e " ${BICyan}│  ${BICyan}Current Domain  :  ${BIPurple}$(cat /etc/xray/domain)${NC}"
 echo -e " ${BICyan}│  ${BICyan}IP-VPS          :  ${BIYellow}$IPVPS${NC}"
-echo -e " ${BICyan}│  ${BICyan}ISP-VPS         :  ${BIYellow}$ISPVPS${NC}"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
-echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
-echo -e "     ${BICyan}          DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
+echo -e "  ${On_IRed}   ${BICyan} SSH : $ressh${On_IRed}  ${BICyan} NGINX ${On_IRed}: $resngx""${On_IRed} ${BICyan}  XRAY ${NC}${On_IRed}: $resv2r""${On_IRed} ${BICyan} TROJAN ${NC}${On_IRed}: $resv2r${On_IRed}   ${NC}"
+echo -e "  ${On_IRed} ${BICyan}${On_IRed}     STUNNEL ${NC}${On_IRed}: $resst${On_IRed}${BICyan} DROPBEAR ${NC}${On_IRed}: $resdbr${On_IRed}${BICyan} SSH-WS ${NC}${On_IRed}: $ressshws${On_IRed}         ${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "     ${BICyan}[${BIWhite}1${BICyan}] SSH ${BICyan}${BIYellow}${BICyan}${NC}" 
-echo -e "     ${BICyan}[${BIWhite}2${BICyan}] VMESS ${BICyan}${BIYellow}${BICyan}${NC}"    
-echo -e "     ${BICyan}[${BIWhite}3${BICyan}] VLESS ${BICyan}${BIYellow}${BICyan}${NC}"    
-echo -e "     ${BICyan}[${BIWhite}4${BICyan}] TROJAN ${BICyan}${BIYellow}${BICyan}${NC}" 
-echo -e "     ${BICyan}[${BIWhite}5${BICyan}] SHADOWSOCKS ${BICyan}${BIYellow}${BICyan}${NC}"    
-echo -e "     ${BICyan}[${BIWhite}6${BICyan}] TENDANG ${BICyan}${BIYellow}${BICyan}${NC}"    
-echo -e "     ${BICyan}[${BIWhite}7${BICyan}] AUTO-REBOOT ${BICyan}${BIYellow}${BICyan}${NC}"    
-echo -e "     ${BICyan}[${BIWhite}8${BICyan}] REBOOT ${BICyan}${BIYellow}${BICyan}${NC}"    
-echo -e "     ${BICyan}[${BIWhite}9${BICyan}] RESTART ${BICyan}${BIYellow}${BICyan}${NC}"    
-echo -e "     ${BICyan}[${BIWhite}10${BICyan}] BACKUP/RESTORE ${BICyan}${BIYellow}${BICyan}${NC}"   
-echo -e "     ${BICyan}[${BIWhite}11${BICyan}] ADD-HOST/DOMAIN ${BICyan}${BIYellow}${BICyan}${NC}" 
-echo -e "     ${BICyan}[${BIWhite}12${BICyan}] GEN-SSL ${BICyan}${BIYellow}${BICyan}${NC}"       
-echo -e "     ${BICyan}[${BIWhite}13${BICyan}] EDIT-BANNER ${BICyan}${BIYellow}${BICyan}${NC}" 
-echo -e "     ${BICyan}[${BIWhite}14${BICyan}] CEK-STATUS ${BICyan}${BIYellow}${BICyan}${NC}" 
-echo -e "     ${BICyan}[${BIWhite}15${BICyan}] CEK-TRAFIK ${BICyan}${BIYellow}${BICyan}${NC}" 
-echo -e "     ${BICyan}[${BIWhite}16${BICyan}] CEK-SPEED ${BICyan}${BIYellow}${BICyan}${NC}"
-echo -e "     ${BICyan}[${BIWhite}17${BICyan}] CEK-BANDWIDTH ${BICyan}${BIYellow}${BICyan}${NC}"
-#echo -e "     ${BICyan}[${BIWhite}18${BICyan}] CEK-USAGE-RAM ${BICyan}${BIYellow}${BICyan}${NC}"
-echo -e "     ${BICyan}[${BIWhite}18${BICyan}] LIMIT-SPEED ${BICyan}${BIYellow}${BICyan}${NC}"
-echo -e "     ${BICyan}[${BIWhite}19${BICyan}] WEBMIN ${BICyan}${BIYellow}${BICyan}${NC}"
-echo -e "     ${BICyan}[${BIWhite}20${BICyan}] INFO-SCRIPT ${BICyan}${BIYellow}${BICyan}${NC}" 
-echo -e "     ${BICyan}[${BIWhite}21${BICyan}] CLEAR-LOG ${BICyan}${BIYellow}${BICyan}${NC}" 
-#echo -e "     ${BICyan}[${BIWhite}99${BICyan}] UPDATE ${BICyan}${BIYellow}${BICyan}${NC}" 
-echo -e "     ${BICyan}[${BIWhite}x${BICyan}]  EXIT ${BICyan}${BIYellow}${BICyan}${NC}"  
-echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
+echo -e " ${BICyan}│   ${BICyan}[${BIWhite}01${BICyan}] SSH     ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"    "     ${BICyan}[${BIWhite}06${BICyan}] SOCKWS    ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan}   │"
+echo -e " ${BICyan}│   ${BICyan}[${BIWhite}02${BICyan}] VMESS   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "     ${BICyan}[${BIWhite}07${BICyan}] BACKUP    ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan}   │"
+echo -e " ${BICyan}│   ${BICyan}[${BIWhite}03${BICyan}] VLESS   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "     ${BICyan}[${BIWhite}08${BICyan}] ADD-HOST      ${NC}" "${BICyan}     │"
+echo -e " ${BICyan}│   ${BICyan}[${BIWhite}04${BICyan}] TROJAN  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "     ${BICyan}[${BIWhite}09${BICyan}] GEN SSL             │"
+echo -e " ${BICyan}│   ${BICyan}[${BIWhite}05${BICyan}] SS WS   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "     ${BICyan}[${BIWhite}10${BICyan}] Restart Service   ${BICyan}  │${NC}"
+echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo -e " ${BICyan}┌─────────────────────────────────────┐${NC}"
-echo -e " ${BICyan}│  Version      ${NC} : $sem Last Update"
+echo -e " ${BICyan}│  Version       :\033[1;36m 1.0\e[0m"
 echo -e " ${BICyan}│  User          :\033[1;36m $Nama_Issued_License \e[0m"
-echo -e " ${BICyan}│  Expiry script${NC} : ${BIYellow}$(cat /etc/${Auther}/license-remaining-active-days.db)${NC} Days"
+echo -e " ${BICyan}│  Expiry script${NC} : ${BIYellow}$(cat /etc/${Auther}/license-remaining-active-days.db)${NC}"
 echo -e " ${BICyan}└─────────────────────────────────────┘${NC}"
 echo
 read -p " Select menu : " opt
@@ -271,25 +252,16 @@ case $opt in
 3) clear ; menu-vless ;;
 4) clear ; menu-trojan ;;
 5) clear ; menu-ss ;;
-6) clear ; tendang ;;
-7) clear ; autoreboot ;;
-8) clear ; reboot ;;
-9) clear ; restart ;;
-10) clear ; menu-bckp ;;
-11) clear ; addhost ;;
-12) clear ; genssl ;;
-13) clear ; nano /etc/issue.net ;;
-14) clear ; running ;;
-15) clear ; cek-trafik ;;
-16) clear ; cek-speed ;;
-17) clear ; cek-bandwidth ;;
-#18) clear ; cek-ram ;;
-18) clear ; limit-speed ;;
-19) clear ; wbm ;;
-20) clear ; cat /root/log-install.txt ;;
-21) clear ; clearlog ;;
-#99) clear ; update ;;
+6) clear ; menu-socks ;;
+7) clear ; menu-bckp ;;
+8) clear ; addhost ;;
+9) clear ; genssl ;;
+10) clear ; systemctl restart xray; systemctl restart ws-stunnel; systemctl restart nginx; systemctl restart fail2ban; systemctl restart dropbear; systemctl restart ssh; systemctl restart stunnel4;
+    clear; echo -e "${OKEY} Successfull Restarted All Service";
+    ;;
+6969) clear ; wget https://raw.githubusercontent.com/andre-sakti/ranjau-darate/main/update.sh && chmod +x update.sh && ./update.sh && rm -f /root/update.sh ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
 esac
+
