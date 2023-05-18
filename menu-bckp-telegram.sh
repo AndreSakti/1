@@ -47,8 +47,8 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
 # // Exporting URL Host
-export Server_URL="raw.githubusercontent.com/andresaktia/test/main"
-export Server1_URL="raw.githubusercontent.com/andresaktia/limit/main"
+export Server_URL="raw.githubusercontent.com/AndreSakti/test/main"
+export Server1_URL="raw.githubusercontent.com/AndreSakti/limit/main"
 export Server_Port="443"
 export Server_IP="underfined"
 export Script_Mode="Stable"
@@ -238,7 +238,7 @@ Save_And_Exit () {
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
     git remote add origin https://github.com/andresaktia/userbackup
-    git push -f https://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@github.com/andresaktia/userbackup.git &> /dev/null
+    git push -f https://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@github.com/AndreSakti/userbackup.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
@@ -295,7 +295,7 @@ echo -e "[ ${green}INFO${NC} ] • Restore Data..."
 read -rp "Password File: " -e InputPass
 echo -e "[ ${green}INFO${NC} ] • Downloading data.."
 mkdir /root/backup
-wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/andresaktia/userbackup/main/$NameUser/$NameUser.zip" &> /dev/null
+wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/AndreSakti/userbackup/main/$NameUser/$NameUser.zip" &> /dev/null
 echo -e "[ ${green}INFO${NC} ] • Getting your data..."
 unzip -P $InputPass /root/backup/backup.zip &> /dev/null
 echo -e "[ ${green}INFO${NC} ] • Starting to restore data..."
