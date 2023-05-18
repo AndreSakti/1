@@ -45,8 +45,8 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
 # // Exporting URL Host
-export Server_URL="raw.githubusercontent.com/andresaktia/test/main"
-export Server1_URL="raw.githubusercontent.com/andresaktia/limit/main"
+export Server_URL="raw.githubusercontent.com/AndreSakti/test/main"
+export Server1_URL="raw.githubusercontent.com/AndreSakti/limit/main"
 export Server_Port="443"
 export Server_IP="underfined"
 export Script_Mode="Stable"
@@ -213,11 +213,11 @@ echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
-export sem=$( curl -s https://raw.githubusercontent.com/andresaktia/test/main/versions)
+export sem=$( curl -s https://raw.githubusercontent.com/AndreSakti/test/main/versions)
 export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 ISPVPS=$( curl -s ipinfo.io/org )
-export Server_URL="raw.githubusercontent.com/andresaktia/test/main"
+export Server_URL="raw.githubusercontent.com/AndreSakti/test/main"
 License_Key=$(cat /etc/${Auther}/license.key)
 export Nama_Issued_License=$( curl -s https://${Server_URL}/validated-registered-license-key.txt | grep -w $License_Key | cut -d ' ' -f 7-100 | tr -d '\r' | tr -d '\r\n')
 clear
