@@ -51,8 +51,8 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
 # // Exporting URL Host
-export Server_URL="raw.githubusercontent.com/andre-sakti/license/main"
-export Server1_URL="raw.githubusercontent.com/andre-sakti/limit/main"
+export Server_URL="raw.githubusercontent.com/AndreSakti/test/main"
+export Server1_URL="raw.githubusercontent.com/AndreSakti/limit/main"
 export Server_Port="443"
 export Server_IP="underfined"
 export Script_Mode="Stable"
@@ -134,7 +134,7 @@ commonname=None
 email=bahenol@janda
 
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/andre-sakti/ranjau-darate/main/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/AndreSakti/ranjau-darate/main/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 cd
@@ -214,7 +214,7 @@ echo -ne
 fi
 cd
 echo -e "[ ${green}INFO$NC ] Installing badvpn for game support..."
-wget -q -O /usr/bin/badvpn-udpgw "https://github.com/andre-sakti/ranjau-darate/raw/main/newudpgw"
+wget -q -O /usr/bin/badvpn-udpgw "https://github.com/AndreSakti/ranjau-darate/raw/main/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw  >/dev/null 2>&1
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local >/dev/null 2>&1
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local >/dev/null 2>&1
@@ -299,7 +299,7 @@ echo -e "[ ${green}INFO$NC ] Config file at /usr/local/ddos/ddos.conf"
 # banner /etc/issue.net
 sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/issue.net "https://raw.githubusercontent.com/andre-sakti/1/main/issue.net"
+wget -q -O /etc/issue.net "https://raw.githubusercontent.com/AndreSakti/1/main/issue.net"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
