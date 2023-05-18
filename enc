@@ -1,0 +1,6 @@
+#!/bin/bash
+for x in *
+do
+echo "proses file $x ..."
+shc -r -f $x
+done

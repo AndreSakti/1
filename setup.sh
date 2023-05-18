@@ -46,8 +46,8 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
 # // Exporting URL Host
-export Server_URL="raw.githubusercontent.com/AndreSakti/test1/main"
-export Server1_URL="raw.githubusercontent.com/AndreSakti/limit1/main"
+export Server_URL="raw.githubusercontent.com/andresaktia/test/main"
+export Server1_URL="raw.githubusercontent.com/andresaktia/limit/main"
 export Server_Port="443"
 export Server_IP="underfined"
 export Script_Mode="Stable"
@@ -416,41 +416,41 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$green      Install Xray           $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 1 
-wget -q https://raw.githubusercontent.com/AndreSakti/1/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget -q https://raw.githubusercontent.com/andresaktia/1/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 
 # // Download Data
 echo -e "${GREEN}Download Data${NC}"
-wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/AndreSakti/1/main/add-ws.sh"
-wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/AndreSakti/1/main/add-ssws.sh"
-#wget -q -O /usr/bin/add-socks "https://raw.githubusercontent.com/AndreSakti/1/main/add-socks.sh"
-wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/AndreSakti/1/main/add-vless.sh"
-wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/AndreSakti/1/main/add-tr.sh"
-#wget -q -O /usr/bin/add-trgo "https://raw.githubusercontent.com/AndreSakti/1/main/add-trgo.sh"
-wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/AndreSakti/1/main/autoreboot.sh"
-wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/AndreSakti/1/main/restart.sh"
-wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/AndreSakti/1/main/tendang.sh"
-wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/AndreSakti/1/main/clearlog.sh"
-wget -q -O /usr/bin/running "https://raw.githubusercontent.com/AndreSakti/1/main/running.sh"
-wget -q -O /usr/bin/cek-trafik "https://raw.githubusercontent.com/AndreSakti/1/main/cek-trafik.sh"
-wget -q -O /usr/bin/cek-speed "https://raw.githubusercontent.com/AndreSakti/1/main/speedtes_cli.py"
-wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/AndreSakti/1/main/cek-bandwidth.sh"
-#wget -q -O /usr/bin/cek-ram "https://raw.githubusercontent.com/AndreSakti/0/main/ram.sh"
-wget -q -O /usr/bin/limit-speed "https://raw.githubusercontent.com/AndreSakti/1/main/limit-speed.sh"
-wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/AndreSakti/1/main/menu-vless.sh"
-wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/AndreSakti/1/main/menu-vmess.sh"
-#wget -q -O /usr/bin/menu-socks "https://raw.githubusercontent.com/AndreSakti/1/main/menu-socks.sh"
-wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/AndreSakti/1/main/menu-ss.sh"
-wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/AndreSakti/1/main/menu-trojan.sh"
-#wget -q -O /usr/bin/menu-trgo "https://raw.githubusercontent.com/AndreSakti/1/main/menu-trgo.sh"
-wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/AndreSakti/1/main/menu-ssh.sh"
-#wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/AndreSakti/1/main/menu-bckp-telegram.sh"
-wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/AndreSakti/1/main/menu-bckp-github.sh"
-#wget -q -O /usr/bin/bckp "https://raw.githubusercontent.com/AndreSakti/1/main/bckpbot.sh"
-wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/AndreSakti/1/main/usernew.sh"
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/AndreSakti/1/main/menu.sh"
-wget -q -O /usr/bin/wbm "https://raw.githubusercontent.com/AndreSakti/1/main/webmin.sh"
-wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/AndreSakti/1/main/xp.sh"
-#wget -q -O /usr/bin/update "https://raw.githubusercontent.com/AndreSakti/1/main/update.sh"
+wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/andresaktia/1/main/add-ws.sh"
+wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/andresaktia/1/main/add-ssws.sh"
+#wget -q -O /usr/bin/add-socks "https://raw.githubusercontent.com/andresaktia/1/main/add-socks.sh"
+wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/andresaktia/1/main/add-vless.sh"
+wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/andresaktia/1/main/add-tr.sh"
+#wget -q -O /usr/bin/add-trgo "https://raw.githubusercontent.com/andresaktia/1/main/add-trgo.sh"
+wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/andresaktia/1/main/autoreboot.sh"
+wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/andresaktia/1/main/restart.sh"
+wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/andresaktia/1/main/tendang.sh"
+wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/andresaktia/1/main/clearlog.sh"
+wget -q -O /usr/bin/running "https://raw.githubusercontent.com/andresaktia/1/main/running.sh"
+wget -q -O /usr/bin/cek-trafik "https://raw.githubusercontent.com/andresaktia/1/main/cek-trafik.sh"
+wget -q -O /usr/bin/cek-speed "https://raw.githubusercontent.com/andresaktia/1/main/speedtes_cli.py"
+wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/andresaktia/1/main/cek-bandwidth.sh"
+#wget -q -O /usr/bin/cek-ram "https://raw.githubusercontent.com/andresaktia/0/main/ram.sh"
+wget -q -O /usr/bin/limit-speed "https://raw.githubusercontent.com/andresaktia/1/main/limit-speed.sh"
+wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/andresaktia/1/main/menu-vless.sh"
+wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/andresaktia/1/main/menu-vmess.sh"
+#wget -q -O /usr/bin/menu-socks "https://raw.githubusercontent.com/andresaktia/1/main/menu-socks.sh"
+wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/andresaktia/1/main/menu-ss.sh"
+wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/andresaktia/1/main/menu-trojan.sh"
+#wget -q -O /usr/bin/menu-trgo "https://raw.githubusercontent.com/andresaktia/1/main/menu-trgo.sh"
+wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/andresaktia/1/main/menu-ssh.sh"
+#wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/andresaktia/1/main/menu-bckp-telegram.sh"
+wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/andresaktia/1/main/menu-bckp-github.sh"
+#wget -q -O /usr/bin/bckp "https://raw.githubusercontent.com/andresaktia/1/main/bckpbot.sh"
+wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/andresaktia/1/main/usernew.sh"
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/andresaktia/1/main/menu.sh"
+wget -q -O /usr/bin/wbm "https://raw.githubusercontent.com/andresaktia/1/main/webmin.sh"
+wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/andresaktia/1/main/xp.sh"
+#wget -q -O /usr/bin/update "https://raw.githubusercontent.com/andresaktia/1/main/update.sh"
 chmod +x /usr/bin/add-ws
 chmod +x /usr/bin/add-ssws
 #chmod +x /usr/bin/add-socks
@@ -542,25 +542,25 @@ else
 gg="AM"
 fi
 echo -e "[ ${green}Pleas Wait Update DB ${NC} ]"
-git clone https://github.com/AndreSakti/limit1.git /root/limit1/ &> /dev/null
+git clone https://github.com/andresaktia/limit.git /root/limit/ &> /dev/null
 babu=$(cat /etc/.bijipeler/license.key)
-echo -e "$babu $IP $Masa_Laku_License_Berlaku_Sampai" >> /root/limit1/limit.txt
-cd /root/limit1
+echo -e "$babu $IP $Masa_Laku_License_Berlaku_Sampai" >> /root/limit/limit.txt
+cd /root/limit
     git config --global user.email "andresaktiadhl@gmail.com" &> /dev/null
-    git config --global user.name "AndreSakti" &> /dev/null
+    git config --global user.name "andresaktia" &> /dev/null
     rm -fr .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/AndreSakti/limit1
-    git push -f https://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@github.com/AndreSakti/limit1.git &> /dev/null
+    git remote add origin https://github.com/andresaktia/limit
+    git push -f https://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@github.com/andresaktia/limit.git &> /dev/null
 cd
 echo "1.1" >> /home/.ver
 rm -fr /root/limit
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ AndreSakti Premium ]-===================="
+echo "=====================-[ Andresaktia Premium ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -606,7 +606,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script Created By AndreSakti ]-==============="
+echo "===============-[ Script Created By Andresaktia ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
