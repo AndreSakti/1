@@ -49,8 +49,8 @@ red() { echo -e "\\033[31;1m${*}\\033[0m"; }
  UNDERLINE="\e[4m"
 
 # // ing URL Host
- Server_URL="raw.githubusercontent.com/andre-sakti/test/main"
- Server1_URL="raw.githubusercontent.com/andre-sakti/limit/main"
+ Server_URL="raw.githubusercontent.com/AndreSakti/test/main"
+ Server1_URL="raw.githubusercontent.com/AndreSakti/limit/main"
  Server_Port="443"
  Server_IP="underfined"
  Script_Mode="Stable"
@@ -214,10 +214,10 @@ if [[ $choose_domain == "2" ]]; then # // Using Automatic Domain
 
 # // String / Request Data
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-DOMAIN=red-flat.my.id
-SUB_DOMAIN=${sub}.red-flat.my.id
-CF_ID=wirogendeng980@gmail.com
-CF_KEY=4ba725444dad4c14cfdcc144e9cd9b26177fc
+DOMAIN=andresakti.xyz
+SUB_DOMAIN=${sub}.andresakti.xyz
+CF_ID=sakti7asa@gmail.com
+CF_KEY=d98bb9cf92a8dcb0b4dbac03afc6a29d5bad4
 set -euo pipefail
 IP=$(curl -sS ifconfig.me);
 echo "Updating DNS for ${SUB_DOMAIN}..."
@@ -865,36 +865,46 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$green      Install Jembot           $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 1 
-wget https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/jembot.sh && chmod +x jembot.sh && ./jembot.sh 
+wget https://raw.githubusercontent.com/AndreSakti/1/main/jembot.sh && chmod +x jembot.sh && ./jembot.sh 
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install SSH / WS               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh 
+wget https://raw.githubusercontent.com/AndreSakti/1/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh 
 #sshws
-wget https://raw.githubusercontent.com/andre-sakti/ranjau-darate/main/weleh.sh && chmod +x weleh.sh && ./weleh.sh 
+wget https://raw.githubusercontent.com/AndreSakti/ranjau-darate/main/weleh.sh && chmod +x weleh.sh && ./weleh.sh 
 #setbr
 echo -e "[ ${green}Download Data ${NC} ] "
 cd /usr/bin
-wget -q -O add-ws "https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/add-ws.sh"
-wget -q -O add-ssws "https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/add-ssws.sh"
-wget -q -O add-socks "https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/add-socks.sh"
-wget -q -O add-vless "https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/add-vless.sh"
-wget -q -O add-tr "https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/add-tr.sh"
-wget -q -O clearlog "https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/clearlog.sh"
-wget -q -O menu-vless "https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/menu-vless.sh"
-wget -q -O menu-vmess "https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/menu-vmess.sh"
-wget -q -O menu-socks "https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/menu-socks.sh"
-wget -q -O menu-bckp "https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/menu-bckp.sh"
-wget -q -O menu-ss "https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/menu-ss.sh"
-wget -q -O menu-trojan "https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/menu-trojan.sh"
-wget -q -O menu-ssh "https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/menu-ssh.sh"
-wget -q -O usernew "https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/usernew.sh"
-wget -q -O menu "https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/menu.sh"
-wget -q -O xp "https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/xp.sh"
-wget -q -O bckp "https://raw.githubusercontent.com/andre-sakti/hayomauapa/main/bckp.sh"
+wget -q -O add-ws "https://raw.githubusercontent.com/AndreSakti/1/main/add-ws.sh"
+wget -q -O add-ssws "https://raw.githubusercontent.com/AndreSakti/1/main/add-ssws.sh"
+wget -q -O add-socks "https://raw.githubusercontent.com/AndreSakti/1/main/add-socks.sh"
+wget -q -O add-vless "https://raw.githubusercontent.com/AndreSakti/1/main/add-vless.sh"
+wget -q -O add-tr "https://raw.githubusercontent.com/AndreSakti/1/main/add-tr.sh"
+wget -q -O clearlog "https://raw.githubusercontent.com/AndreSakti/1/main/clearlog.sh"
+wget -q -O menu-vless "https://raw.githubusercontent.com/AndreSakti/1/main/menu-vless.sh"
+wget -q -O menu-vmess "https://raw.githubusercontent.com/AndreSakti/1/main/menu-vmess.sh"
+wget -q -O menu-socks "https://raw.githubusercontent.com/AndreSakti/1/main/menu-socks.sh"
+wget -q -O menu-bckp "https://raw.githubusercontent.com/AndreSakti/1/main/menu-bckp.sh"
+wget -q -O menu-ss "https://raw.githubusercontent.com/AndreSakti/1/main/menu-ss.sh"
+wget -q -O menu-trojan "https://raw.githubusercontent.com/AndreSakti/1/main/menu-trojan.sh"
+wget -q -O menu-ssh "https://raw.githubusercontent.com/AndreSakti/1/main/menu-ssh.sh"
+wget -q -O usernew "https://raw.githubusercontent.com/AndreSakti/1/main/usernew.sh"
+wget -q -O menu "https://raw.githubusercontent.com/AndreSakti/1/main/menu.sh"
+wget -q -O xp "https://raw.githubusercontent.com/AndreSakti/1/main/xp.sh"
+wget -q -O bckp "https://raw.githubusercontent.com/AndreSakti/1/main/bckp.sh"
+wget -q -O autoreboot "https://raw.githubusercontent.com/AndreSakti/1/main/autoreboot.sh"
+wget -q -O restart "https://raw.githubusercontent.com/AndreSakti/1/main/restart.sh"
+wget -q -O tendang "https://raw.githubusercontent.com/AndreSakti/1/main/tendang.sh"
+wget -q -O clearlog "https://raw.githubusercontent.com/AndreSakti/1/main/clearlog.sh"
+wget -q -O running "https://raw.githubusercontent.com/AndreSakti/1/main/running.sh"
+wget -q -O cek-trafik "https://raw.githubusercontent.com/AndreSakti/1/main/cek-trafik.sh"
+wget -q -O cek-speed "https://raw.githubusercontent.com/AndreSakti/1/main/speedtes_cli.py"
+wget -q -O cek-bandwidth "https://raw.githubusercontent.com/AndreSakti/1/main/cek-bandwidth.sh"
+wget -q -O limit-speed "https://raw.githubusercontent.com/AndreSakti/1/main/limit-speed.sh"
+wget -q -O webmin "https://raw.githubusercontent.com/AndreSakti/1/main/webmin.sh"
 chmod +x bckp
 chmod +x add-ws
 chmod +x add-ssws
@@ -912,6 +922,16 @@ chmod +x menu-ssh
 chmod +x menu-bckp
 chmod +x menu
 chmod +x xp
+chmod +x autoreboot
+chmod +x restart
+chmod +x tendang
+chmod +x clearlog
+chmod +x running
+chmod +x cek-trafik
+chmod +x speedtes_cli
+chmod +x cek-bandwidth
+chmod +x limit-speed
+chmod +x webmin
 cd
 
 cat > /etc/cron.d/re_otm <<-END
@@ -980,19 +1000,19 @@ CEKIP=$( curl -s https://${Server1_URL}/limit.txt | grep -w $IP )
 if [[ $CEKIP == $IP ]]; then
     Skip='true'
 else
-git clone https://github.com/andre-sakti/limit.git /root/limit/ &> /dev/null
+git clone https://github.com/AndreSakti/limit.git /root/limit/ &> /dev/null
 babu=$(cat /etc/.bijipeler/license.key)
 echo -e "$babu $IP $Masa_Laku_License_Berlaku_Sampai" >> /root/limit/limit.txt
 cd /root/limit
-    git config --global user.email "andregemes123@gmail.com" &> /dev/null
-    git config --global user.name "andre-sakti" &> /dev/null
+    git config --global user.email "anymous866@gmail.com" &> /dev/null
+    git config --global user.name "AndreSakti" &> /dev/null
     rm -rf .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/andre-sakti/limit
-    git push -f https://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@github.com/andre-sakti/limit.git &> /dev/null
+    git remote add origin https://github.com/AndreSakti/limit
+    git push -f https://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@github.com/AndreSakti/limit.git &> /dev/null
 cd
 fi
 #send status install
@@ -1012,7 +1032,7 @@ echo "1.1" >> /home/.ver
 rm -rf /root/limit
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ BAHENOL Premium ]-===================="
+echo "=====================-[ Script Premium by Andre Sakti ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -1054,7 +1074,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script Created By BAHENOL ]-==============="
+echo "===============-[ Script Created By Andre Sakti ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
